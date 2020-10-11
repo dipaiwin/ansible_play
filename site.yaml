@@ -1,0 +1,6 @@
+---
+- hosts:
+    - cloud
+  roles:
+    - {role: 'zsh', tags: 'zsh'}
+    - {role: 'tools', tags: 'tools'}

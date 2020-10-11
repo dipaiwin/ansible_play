@@ -1,0 +1,6 @@
+---
+- name: Installs packages
+  apt:
+    pkg: ["htop", "jq"]
+    state: present
+    update_cache: true

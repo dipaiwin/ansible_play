@@ -1,0 +1,20 @@
+---
+- name: Installs packages
+  apt:
+    pkg: ["zsh", "git"]
+    state: present
+    update_cache: true
+- name: Copy .zshrc
+  copy:
+    src: .zshrc
+    dest: /root/.zshrc
+    mode: "0644"
+- name: Set shell
+  user:
+    name: root
+    shell: /usr/bin/zsh
+- name: Install oh-my-zsh
+  git:
+    repo: "https://github.com/robbyrussell/oh-my-zsh.git"
+    dest: "/root/.oh-my-zsh"
+  tags: oh-my-zsh
