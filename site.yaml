@@ -4,3 +4,4 @@
   roles:
     - {role: 'zsh', tags: 'zsh'}
     - {role: 'tools', tags: 'tools'}
+    - {role: 'k3s', tags: 'k3s'}
